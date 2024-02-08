@@ -18,6 +18,7 @@ from optimization import deduplicate
 from log_lines import tern_system
 from simple import simple_system
 from minimal import minimal_system
+from balanced import balanced_system
 
 
 def make_circuit(graph, color_number, method, grover_iterations=-1):
@@ -118,15 +119,12 @@ def configure(args_kw):
             print("Generating random graph with", conf["nodes"],
                   "nodes with chromatic number:", conf["k"])
 
-    if conf["system"] == "tern":
-        conf["system"] = tern_system
-    elif conf["system"] == "simple":
-        conf["system"] = simple_system
-    elif conf["system"] == "minimal":
-        conf["system"] = minimal_system
-    else:
-        raise Exception("Unrecognized circuit generation system")
+    systems = {"tern": tern_system,
+               "simple": simple_system,
+               "minimal": minimal_system,
+               "balanced": balanced_system}
 
+    conf["system"] = systems[conf["system"]]
     return conf
 
 
