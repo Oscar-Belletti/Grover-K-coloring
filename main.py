@@ -15,7 +15,6 @@ from qiskit.visualization import plot_histogram
 from problem import decompose, diffusion, make_problem
 from optimization import deduplicate
 
-from log_lines import tern_system
 from simple import simple_system
 from minimal import minimal_system
 from balanced import balanced_system
@@ -120,8 +119,7 @@ def configure(args_kw):
             print("Generating random graph with", conf["nodes"],
                   "nodes with chromatic number:", conf["k"])
 
-    systems = {"tern": tern_system,
-               "simple": simple_system,
+    systems = {"simple": simple_system,
                "minimal": minimal_system,
                "balanced": balanced_system,
                "original": original_system}
