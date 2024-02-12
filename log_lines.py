@@ -62,7 +62,7 @@ def qubits(n, v):  # number of qubits to represent v values
 
 def tern_compose(qc, problem):
 
-    components = get_greedy_components_list(qc, problem)  # TODO try greedy
+    components = get_greedy_components_list(qc, problem)
     q = qubits(3, len(components))
 
     lines = [[0] * 3 for j in range(3, q+1, 3)]

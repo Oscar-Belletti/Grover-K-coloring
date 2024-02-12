@@ -19,6 +19,7 @@ from log_lines import tern_system
 from simple import simple_system
 from minimal import minimal_system
 from balanced import balanced_system
+from original import original_system
 
 
 def make_circuit(graph, color_number, method, grover_iterations=-1):
@@ -122,7 +123,8 @@ def configure(args_kw):
     systems = {"tern": tern_system,
                "simple": simple_system,
                "minimal": minimal_system,
-               "balanced": balanced_system}
+               "balanced": balanced_system,
+               "original": original_system}
 
     conf["system"] = systems[conf["system"]]
     return conf
@@ -207,7 +209,7 @@ def main(k=None, graph=None, run=None, grover_iterations=None, online_sim=None,
     print("width:", qc.num_qubits)
     # qc.draw(output="mpl")
     qc = deduplicate(qc)
-
+    print("  After optimization:")
     print("depth:", qc.depth())
     print("width:", qc.num_qubits)
     print(" -> depth * width:", qc.depth() * qc.num_qubits)
@@ -293,6 +295,3 @@ def cheat_graph(n, k, amt=20):
     return min(graphs,
                key=lambda g: floor(pi/4 * sqrt(2 ** (ceil(log2(k)) * len(g))
                                                / len(cpu_color_graph(g, k)))))
-
-
-# main(k=3, run="no")

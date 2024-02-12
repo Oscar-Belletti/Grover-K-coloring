@@ -15,10 +15,6 @@ def balanced_values(qubits):
 
 
 def balanced_qubit_count(problem):
-    print("number of components:", problem_comp_num(problem))
-    print("number of qubits:", balanced_qubits(problem_comp_num(problem)))
-    print(" ->", balanced_values(balanced_qubits(problem_comp_num(problem))),
-          "values")
     return (n(problem) * qn(problem)
             + balanced_qubits(problem_comp_num(problem))
             + 1)

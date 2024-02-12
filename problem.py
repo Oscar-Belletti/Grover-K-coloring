@@ -165,9 +165,9 @@ def remove_component(components, component):
 
 def greedy_get_components_window(problem, components, amount):
     # sort nodes by number of components
-    def ranking():  # TODO make sure the order is right
+    def ranking():
         return sorted(range(n(problem)),
-                      key=lambda x: len(node_arcs_comp(components, x)))
+                      key=lambda x: -len(node_arcs_comp(components, x)))
 
     def next_component(nodes):
         for node in nodes:
