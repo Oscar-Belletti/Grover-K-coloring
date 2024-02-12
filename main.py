@@ -210,7 +210,7 @@ def main(k=None, graph=None, run=None, grover_iterations=None, online_sim=None,
 
     print("depth:", qc.depth())
     print("width:", qc.num_qubits)
-
+    print(" -> depth * width:", qc.depth() * qc.num_qubits)
     if print_circuit:
         drawings.append(lambda: plot_circuit(qc))
 
@@ -231,16 +231,17 @@ def main(k=None, graph=None, run=None, grover_iterations=None, online_sim=None,
 
     print("Number of solutions(cpu):", correct_colors,
           "/", all_colorings)
-    print("Optimal grover iterations number:",
-          pi / 4 * sqrt(all_colorings / correct_colors))
-    print("Random guess chance of being correct:",
-          correct_colors / all_colorings)
-    print("Chance of getting a correct result:",
-          sum(measures_of_correct)/sum(measures.values()))
-    print("Average \"probability\" of individual correct outcomes:",
-          fmean(measures_of_correct)/sum(measures.values()))
-    print("Average \"probability\" of individual incorrect outcomes:",
-          fmean(measures_of_incorrect)/sum(measures.values()))
+    if correct_colors != 0:
+        print("Optimal grover iterations number:",
+              pi / 4 * sqrt(all_colorings / correct_colors))
+        print("Random guess chance of being correct:",
+              correct_colors / all_colorings)
+        print("Chance of getting a correct result:",
+              sum(measures_of_correct)/sum(measures.values()))
+        print("Average \"probability\" of individual correct outcomes:",
+              fmean(measures_of_correct)/sum(measures.values()))
+        print("Average \"probability\" of individual incorrect outcomes:",
+              fmean(measures_of_incorrect)/sum(measures.values()))
 
     while drawings:
         drawings.pop()()

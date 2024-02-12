@@ -34,6 +34,17 @@ def balanced_compose(qc, problem):
     ancillas = balanced_qubits(problem_comp_num(problem))
     outputs = []
     for target_i in range(ancillas-1, 1, -1):
+        if comp_num(components) <= target_i + 1:
+            comps = greedy_get_components_window(problem, components,
+                                                 comp_num(components))
+            for i, component in enumerate(map(component_builder, comps)):
+                component(ancilla_index(problem) + i)
+                history_add(problem,
+                            lambda c=component, t=ancilla_index(problem)+i:
+                            c(t))
+                outputs.append(ancilla_index(problem) + i)
+            break
+
         components_target = greedy_get_components_window(problem, components,
                                                          target_i)
         if len(components_target) == 0:
@@ -45,7 +56,6 @@ def balanced_compose(qc, problem):
                         lambda c=component, t=ancilla_index(problem) + i: c(t))
         sources = [ancilla_index(problem) + i
                    for i in range(len(components_target))]
-        print("writing", len(sources), "values to", target_i)
         qc.x(ancilla_index(problem)+target_i)
         history_add(problem,
                     lambda target=ancilla_index(problem)+target_i:
@@ -61,10 +71,9 @@ def balanced_compose(qc, problem):
             component(ancilla_index(problem) + i)
             history_add(problem,
                         lambda c=component, t=ancilla_index(problem) + i: c(t))
-    if comp_num(components) < 2:
+    if comp_num(components) <= 2:
         final_comps = greedy_get_components_window(problem, components, 2)
         for i, c in enumerate(map(component_builder, final_comps)):
-            print("writing one value to", i)
             c(ancilla_index(problem) + i)
             outputs.append(ancilla_index(problem) + i)
             history_add(problem, lambda c=c, t=ancilla_index(problem)+i: c(t))
