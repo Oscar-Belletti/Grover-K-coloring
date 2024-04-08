@@ -183,10 +183,11 @@ def plot_circuit(qc):
 graphs = []
 
 
-def main(k=None, graph=None, run=None, grover_iterations=None, online_sim=None,
-         quantum_sim=None, local_shots=None, online_shots=None,
-         quantum_shots=None, print_circuit=None, figsize=None,
-         generate=None, nodes=None, print_graph=None, system=None):
+def main(k=None, graph=None, run=None, grover_iterations=None,
+         online_sim=None, quantum_sim=None, local_shots=None,
+         online_shots=None, quantum_shots=None, print_circuit=None,
+         figsize=None, generate=None, nodes=None, print_graph=None,
+         system=None, deduplicate_opt=None):
     kwargs = locals().copy()  # keyword arguments as a dict
 
     global conf, measures
@@ -206,10 +207,12 @@ def main(k=None, graph=None, run=None, grover_iterations=None, online_sim=None,
     print("depth:", qc.depth())
     print("width:", qc.num_qubits)
     # qc.draw(output="mpl")
-    qc = deduplicate(qc)
-    print("  After optimization:")
-    print("depth:", qc.depth())
-    print("width:", qc.num_qubits)
+    if conf["deduplicate_opt"]:
+        print("Deduplicating gates...")
+        qc = deduplicate(qc)
+        print("  After optimization:")
+        print("depth:", qc.depth())
+        print("width:", qc.num_qubits)
     print(" -> depth * width:", qc.depth() * qc.num_qubits)
     if print_circuit:
         drawings.append(lambda: plot_circuit(qc))
