@@ -1,0 +1,955 @@
+OPENQASM 3;
+include "stdgates.inc";
+gate cu1_129722976456912(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(pi/4) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/4) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/4) _gate_q_1;
+}
+gate rcccx _gate_q_0, _gate_q_1, _gate_q_2, _gate_q_3 {
+  u2(0, pi) _gate_q_3;
+  u1(pi/4) _gate_q_3;
+  cx _gate_q_2, _gate_q_3;
+  u1(-pi/4) _gate_q_3;
+  u2(0, pi) _gate_q_3;
+  cx _gate_q_0, _gate_q_3;
+  u1(pi/4) _gate_q_3;
+  cx _gate_q_1, _gate_q_3;
+  u1(-pi/4) _gate_q_3;
+  cx _gate_q_0, _gate_q_3;
+  u1(pi/4) _gate_q_3;
+  cx _gate_q_1, _gate_q_3;
+  u1(-pi/4) _gate_q_3;
+  u2(0, pi) _gate_q_3;
+  u1(pi/4) _gate_q_3;
+  cx _gate_q_2, _gate_q_3;
+  u1(-pi/4) _gate_q_3;
+  u2(0, pi) _gate_q_3;
+}
+gate cu1_129722976457200(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/4) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/4) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/4) _gate_q_1;
+}
+gate rcccx_dg _gate_q_0, _gate_q_1, _gate_q_2, _gate_q_3 {
+  u2(-2*pi, pi) _gate_q_3;
+  u1(pi/4) _gate_q_3;
+  cx _gate_q_2, _gate_q_3;
+  u1(-pi/4) _gate_q_3;
+  u2(-2*pi, pi) _gate_q_3;
+  u1(pi/4) _gate_q_3;
+  cx _gate_q_1, _gate_q_3;
+  u1(-pi/4) _gate_q_3;
+  cx _gate_q_0, _gate_q_3;
+  u1(pi/4) _gate_q_3;
+  cx _gate_q_1, _gate_q_3;
+  u1(-pi/4) _gate_q_3;
+  cx _gate_q_0, _gate_q_3;
+  u2(-2*pi, pi) _gate_q_3;
+  u1(pi/4) _gate_q_3;
+  cx _gate_q_2, _gate_q_3;
+  u1(-pi/4) _gate_q_3;
+  u2(-2*pi, pi) _gate_q_3;
+}
+gate cu1_129717664468848(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(pi/16) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/16) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/16) _gate_q_1;
+}
+gate cu1_129717664467984(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/16) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/16) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/16) _gate_q_1;
+}
+gate cu1_129717664467072(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(pi/16) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/16) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/16) _gate_q_1;
+}
+gate cu1_129717664468224(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/16) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/16) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/16) _gate_q_1;
+}
+gate cu1_129717664465920(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(pi/16) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/16) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/16) _gate_q_1;
+}
+gate cu1_129717664468416(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/16) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/16) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/16) _gate_q_1;
+}
+gate cu1_129717664466064(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(pi/16) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/16) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/16) _gate_q_1;
+}
+gate c3sx _gate_q_0, _gate_q_1, _gate_q_2, _gate_q_3 {
+  h _gate_q_3;
+  cu1_129717664468848(pi/8) _gate_q_0, _gate_q_3;
+  h _gate_q_3;
+  cx _gate_q_0, _gate_q_1;
+  h _gate_q_3;
+  cu1_129717664467984(-pi/8) _gate_q_1, _gate_q_3;
+  h _gate_q_3;
+  cx _gate_q_0, _gate_q_1;
+  h _gate_q_3;
+  cu1_129717664467072(pi/8) _gate_q_1, _gate_q_3;
+  h _gate_q_3;
+  cx _gate_q_1, _gate_q_2;
+  h _gate_q_3;
+  cu1_129717664468224(-pi/8) _gate_q_2, _gate_q_3;
+  h _gate_q_3;
+  cx _gate_q_0, _gate_q_2;
+  h _gate_q_3;
+  cu1_129717664465920(pi/8) _gate_q_2, _gate_q_3;
+  h _gate_q_3;
+  cx _gate_q_1, _gate_q_2;
+  h _gate_q_3;
+  cu1_129717664468416(-pi/8) _gate_q_2, _gate_q_3;
+  h _gate_q_3;
+  cx _gate_q_0, _gate_q_2;
+  h _gate_q_3;
+  cu1_129717664466064(pi/8) _gate_q_2, _gate_q_3;
+  h _gate_q_3;
+}
+gate mcx _gate_q_0, _gate_q_1, _gate_q_2, _gate_q_3, _gate_q_4 {
+  h _gate_q_4;
+  cu1_129722976456912(pi/2) _gate_q_3, _gate_q_4;
+  h _gate_q_4;
+  rcccx _gate_q_0, _gate_q_1, _gate_q_2, _gate_q_3;
+  h _gate_q_4;
+  cu1_129722976457200(-pi/2) _gate_q_3, _gate_q_4;
+  h _gate_q_4;
+  rcccx_dg _gate_q_0, _gate_q_1, _gate_q_2, _gate_q_3;
+  c3sx _gate_q_0, _gate_q_1, _gate_q_2, _gate_q_4;
+}
+gate cu1_129714277220896(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+}
+gate cu1_129714277223200(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129714277224400(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129714277220992(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129714277223536(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129714277223872(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129722863619136(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129722863618320(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129722863616496(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129722863617984(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129722863619808(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129722863616688(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129722863616064(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129722863619760(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129722863617744(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129722863619904(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129722863616784(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129722863618512(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129722863616640(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129722863618032(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129723052442864(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129723052445024(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129723052443152(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129723052445552(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129723052442000(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129723052444064(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129723052445312(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129723052444400(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129723052443872(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129723052442912(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129723052445216(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate cu1_129723049075184(_gate_p_0) _gate_q_0, _gate_q_1 {
+  u1(-pi/64) _gate_q_0;
+  cx _gate_q_0, _gate_q_1;
+  u1(pi/64) _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  u1(-pi/64) _gate_q_1;
+}
+gate mcu1_129714277222384(_gate_p_0) _gate_q_0, _gate_q_1, _gate_q_2, _gate_q_3, _gate_q_4, _gate_q_5, _gate_q_6 {
+  cu1_129714277220896(pi/32) _gate_q_5, _gate_q_6;
+  cx _gate_q_5, _gate_q_4;
+  cu1_129714277223200(-pi/32) _gate_q_4, _gate_q_6;
+  cx _gate_q_5, _gate_q_4;
+  cu1_129714277220896(pi/32) _gate_q_4, _gate_q_6;
+  cx _gate_q_4, _gate_q_3;
+  cu1_129714277224400(-pi/32) _gate_q_3, _gate_q_6;
+  cx _gate_q_5, _gate_q_3;
+  cu1_129714277220896(pi/32) _gate_q_3, _gate_q_6;
+  cx _gate_q_4, _gate_q_3;
+  cu1_129714277220992(-pi/32) _gate_q_3, _gate_q_6;
+  cx _gate_q_5, _gate_q_3;
+  cu1_129714277220896(pi/32) _gate_q_3, _gate_q_6;
+  cx _gate_q_3, _gate_q_2;
+  cu1_129714277223536(-pi/32) _gate_q_2, _gate_q_6;
+  cx _gate_q_5, _gate_q_2;
+  cu1_129714277220896(pi/32) _gate_q_2, _gate_q_6;
+  cx _gate_q_4, _gate_q_2;
+  cu1_129714277223872(-pi/32) _gate_q_2, _gate_q_6;
+  cx _gate_q_5, _gate_q_2;
+  cu1_129714277220896(pi/32) _gate_q_2, _gate_q_6;
+  cx _gate_q_3, _gate_q_2;
+  cu1_129722863619136(-pi/32) _gate_q_2, _gate_q_6;
+  cx _gate_q_5, _gate_q_2;
+  cu1_129714277220896(pi/32) _gate_q_2, _gate_q_6;
+  cx _gate_q_4, _gate_q_2;
+  cu1_129722863618320(-pi/32) _gate_q_2, _gate_q_6;
+  cx _gate_q_5, _gate_q_2;
+  cu1_129714277220896(pi/32) _gate_q_2, _gate_q_6;
+  cx _gate_q_2, _gate_q_1;
+  cu1_129722863616496(-pi/32) _gate_q_1, _gate_q_6;
+  cx _gate_q_5, _gate_q_1;
+  cu1_129714277220896(pi/32) _gate_q_1, _gate_q_6;
+  cx _gate_q_4, _gate_q_1;
+  cu1_129722863617984(-pi/32) _gate_q_1, _gate_q_6;
+  cx _gate_q_5, _gate_q_1;
+  cu1_129714277220896(pi/32) _gate_q_1, _gate_q_6;
+  cx _gate_q_3, _gate_q_1;
+  cu1_129722863619808(-pi/32) _gate_q_1, _gate_q_6;
+  cx _gate_q_5, _gate_q_1;
+  cu1_129714277220896(pi/32) _gate_q_1, _gate_q_6;
+  cx _gate_q_4, _gate_q_1;
+  cu1_129722863616688(-pi/32) _gate_q_1, _gate_q_6;
+  cx _gate_q_5, _gate_q_1;
+  cu1_129714277220896(pi/32) _gate_q_1, _gate_q_6;
+  cx _gate_q_2, _gate_q_1;
+  cu1_129722863616064(-pi/32) _gate_q_1, _gate_q_6;
+  cx _gate_q_5, _gate_q_1;
+  cu1_129714277220896(pi/32) _gate_q_1, _gate_q_6;
+  cx _gate_q_4, _gate_q_1;
+  cu1_129722863619760(-pi/32) _gate_q_1, _gate_q_6;
+  cx _gate_q_5, _gate_q_1;
+  cu1_129714277220896(pi/32) _gate_q_1, _gate_q_6;
+  cx _gate_q_3, _gate_q_1;
+  cu1_129722863617744(-pi/32) _gate_q_1, _gate_q_6;
+  cx _gate_q_5, _gate_q_1;
+  cu1_129714277220896(pi/32) _gate_q_1, _gate_q_6;
+  cx _gate_q_4, _gate_q_1;
+  cu1_129722863619904(-pi/32) _gate_q_1, _gate_q_6;
+  cx _gate_q_5, _gate_q_1;
+  cu1_129714277220896(pi/32) _gate_q_1, _gate_q_6;
+  cx _gate_q_1, _gate_q_0;
+  cu1_129722863616784(-pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_5, _gate_q_0;
+  cu1_129714277220896(pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_4, _gate_q_0;
+  cu1_129722863618512(-pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_5, _gate_q_0;
+  cu1_129714277220896(pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_3, _gate_q_0;
+  cu1_129722863616640(-pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_5, _gate_q_0;
+  cu1_129714277220896(pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_4, _gate_q_0;
+  cu1_129722863618032(-pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_5, _gate_q_0;
+  cu1_129714277220896(pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_2, _gate_q_0;
+  cu1_129723052442864(-pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_5, _gate_q_0;
+  cu1_129714277220896(pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_4, _gate_q_0;
+  cu1_129723052445024(-pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_5, _gate_q_0;
+  cu1_129714277220896(pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_3, _gate_q_0;
+  cu1_129723052443152(-pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_5, _gate_q_0;
+  cu1_129714277220896(pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_4, _gate_q_0;
+  cu1_129723052445552(-pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_5, _gate_q_0;
+  cu1_129714277220896(pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_1, _gate_q_0;
+  cu1_129723052442000(-pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_5, _gate_q_0;
+  cu1_129714277220896(pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_4, _gate_q_0;
+  cu1_129723052444064(-pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_5, _gate_q_0;
+  cu1_129714277220896(pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_3, _gate_q_0;
+  cu1_129723052445312(-pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_5, _gate_q_0;
+  cu1_129714277220896(pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_4, _gate_q_0;
+  cu1_129723052444400(-pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_5, _gate_q_0;
+  cu1_129714277220896(pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_2, _gate_q_0;
+  cu1_129723052443872(-pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_5, _gate_q_0;
+  cu1_129714277220896(pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_4, _gate_q_0;
+  cu1_129723052442912(-pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_5, _gate_q_0;
+  cu1_129714277220896(pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_3, _gate_q_0;
+  cu1_129723052445216(-pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_5, _gate_q_0;
+  cu1_129714277220896(pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_4, _gate_q_0;
+  cu1_129723049075184(-pi/32) _gate_q_0, _gate_q_6;
+  cx _gate_q_5, _gate_q_0;
+  cu1_129714277220896(pi/32) _gate_q_0, _gate_q_6;
+}
+gate mcx_gray _gate_q_0, _gate_q_1, _gate_q_2, _gate_q_3, _gate_q_4, _gate_q_5, _gate_q_6 {
+  h _gate_q_6;
+  mcu1_129714277222384(pi) _gate_q_0, _gate_q_1, _gate_q_2, _gate_q_3, _gate_q_4, _gate_q_5, _gate_q_6;
+  h _gate_q_6;
+}
+bit[6] _creg;
+qubit[13] q116;
+h q116[0];
+h q116[1];
+h q116[2];
+h q116[3];
+h q116[4];
+h q116[5];
+x q116[12];
+h q116[12];
+x q116[6];
+x q116[7];
+x q116[8];
+x q116[9];
+x q116[10];
+x q116[11];
+cx q116[0], q116[2];
+x q116[2];
+cx q116[2], q116[6];
+x q116[2];
+cx q116[0], q116[2];
+cx q116[1], q116[2];
+x q116[2];
+cx q116[2], q116[7];
+x q116[2];
+cx q116[1], q116[2];
+cx q116[1], q116[3];
+x q116[3];
+cx q116[3], q116[8];
+x q116[3];
+cx q116[1], q116[3];
+cx q116[1], q116[5];
+x q116[5];
+cx q116[5], q116[9];
+x q116[5];
+cx q116[1], q116[5];
+x q116[11];
+mcx q116[6], q116[7], q116[8], q116[9], q116[11];
+cx q116[1], q116[5];
+x q116[5];
+cx q116[5], q116[7];
+x q116[5];
+cx q116[1], q116[5];
+cx q116[1], q116[3];
+x q116[3];
+cx q116[3], q116[8];
+x q116[3];
+cx q116[1], q116[3];
+cx q116[1], q116[2];
+x q116[2];
+cx q116[2], q116[9];
+x q116[2];
+cx q116[1], q116[2];
+cx q116[3], q116[4];
+x q116[4];
+cx q116[4], q116[7];
+x q116[4];
+cx q116[3], q116[4];
+mcx_gray q116[6], q116[7], q116[8], q116[9], q116[10], q116[11], q116[12];
+cx q116[3], q116[4];
+x q116[4];
+cx q116[4], q116[7];
+x q116[4];
+cx q116[3], q116[4];
+cx q116[1], q116[2];
+x q116[2];
+cx q116[2], q116[9];
+x q116[2];
+cx q116[1], q116[2];
+cx q116[1], q116[3];
+x q116[3];
+cx q116[3], q116[8];
+x q116[3];
+cx q116[1], q116[3];
+cx q116[1], q116[5];
+x q116[5];
+cx q116[5], q116[7];
+x q116[5];
+cx q116[1], q116[5];
+x q116[11];
+mcx q116[6], q116[7], q116[8], q116[9], q116[11];
+cx q116[1], q116[5];
+x q116[5];
+cx q116[5], q116[9];
+x q116[5];
+cx q116[1], q116[5];
+cx q116[1], q116[3];
+x q116[3];
+cx q116[3], q116[8];
+x q116[3];
+cx q116[1], q116[3];
+cx q116[1], q116[2];
+x q116[2];
+cx q116[2], q116[7];
+x q116[2];
+cx q116[1], q116[2];
+cx q116[0], q116[2];
+x q116[2];
+cx q116[2], q116[6];
+x q116[2];
+cx q116[0], q116[2];
+h q116[0];
+x q116[0];
+h q116[1];
+x q116[1];
+h q116[2];
+x q116[2];
+h q116[3];
+x q116[3];
+h q116[4];
+x q116[4];
+z q116[5];
+mcx_gray q116[0], q116[1], q116[2], q116[3], q116[4], q116[5];
+z q116[5];
+x q116[0];
+h q116[0];
+x q116[1];
+h q116[1];
+x q116[2];
+h q116[2];
+x q116[3];
+h q116[3];
+x q116[4];
+h q116[4];
+cx q116[0], q116[2];
+x q116[2];
+cx q116[2], q116[6];
+x q116[2];
+cx q116[0], q116[2];
+cx q116[1], q116[2];
+x q116[2];
+cx q116[2], q116[7];
+x q116[2];
+cx q116[1], q116[2];
+cx q116[1], q116[3];
+x q116[3];
+cx q116[3], q116[8];
+x q116[3];
+cx q116[1], q116[3];
+cx q116[1], q116[5];
+x q116[5];
+cx q116[5], q116[9];
+x q116[5];
+cx q116[1], q116[5];
+x q116[11];
+mcx q116[6], q116[7], q116[8], q116[9], q116[11];
+cx q116[1], q116[5];
+x q116[5];
+cx q116[5], q116[7];
+x q116[5];
+cx q116[1], q116[5];
+cx q116[1], q116[3];
+x q116[3];
+cx q116[3], q116[8];
+x q116[3];
+cx q116[1], q116[3];
+cx q116[1], q116[2];
+x q116[2];
+cx q116[2], q116[9];
+x q116[2];
+cx q116[1], q116[2];
+cx q116[3], q116[4];
+x q116[4];
+cx q116[4], q116[7];
+x q116[4];
+cx q116[3], q116[4];
+mcx_gray q116[6], q116[7], q116[8], q116[9], q116[10], q116[11], q116[12];
+cx q116[3], q116[4];
+x q116[4];
+cx q116[4], q116[7];
+x q116[4];
+cx q116[3], q116[4];
+cx q116[1], q116[2];
+x q116[2];
+cx q116[2], q116[9];
+x q116[2];
+cx q116[1], q116[2];
+cx q116[1], q116[3];
+x q116[3];
+cx q116[3], q116[8];
+x q116[3];
+cx q116[1], q116[3];
+cx q116[1], q116[5];
+x q116[5];
+cx q116[5], q116[7];
+x q116[5];
+cx q116[1], q116[5];
+x q116[11];
+mcx q116[6], q116[7], q116[8], q116[9], q116[11];
+cx q116[1], q116[5];
+x q116[5];
+cx q116[5], q116[9];
+x q116[5];
+cx q116[1], q116[5];
+cx q116[1], q116[3];
+x q116[3];
+cx q116[3], q116[8];
+x q116[3];
+cx q116[1], q116[3];
+cx q116[1], q116[2];
+x q116[2];
+cx q116[2], q116[7];
+x q116[2];
+cx q116[1], q116[2];
+cx q116[0], q116[2];
+x q116[2];
+cx q116[2], q116[6];
+x q116[2];
+cx q116[0], q116[2];
+h q116[0];
+x q116[0];
+h q116[1];
+x q116[1];
+h q116[2];
+x q116[2];
+h q116[3];
+x q116[3];
+h q116[4];
+x q116[4];
+z q116[5];
+mcx_gray q116[0], q116[1], q116[2], q116[3], q116[4], q116[5];
+z q116[5];
+x q116[0];
+h q116[0];
+x q116[1];
+h q116[1];
+x q116[2];
+h q116[2];
+x q116[3];
+h q116[3];
+x q116[4];
+h q116[4];
+cx q116[0], q116[2];
+x q116[2];
+cx q116[2], q116[6];
+x q116[2];
+cx q116[0], q116[2];
+cx q116[1], q116[2];
+x q116[2];
+cx q116[2], q116[7];
+x q116[2];
+cx q116[1], q116[2];
+cx q116[1], q116[3];
+x q116[3];
+cx q116[3], q116[8];
+x q116[3];
+cx q116[1], q116[3];
+cx q116[1], q116[5];
+x q116[5];
+cx q116[5], q116[9];
+x q116[5];
+cx q116[1], q116[5];
+x q116[11];
+mcx q116[6], q116[7], q116[8], q116[9], q116[11];
+cx q116[1], q116[5];
+x q116[5];
+cx q116[5], q116[7];
+x q116[5];
+cx q116[1], q116[5];
+cx q116[1], q116[3];
+x q116[3];
+cx q116[3], q116[8];
+x q116[3];
+cx q116[1], q116[3];
+cx q116[1], q116[2];
+x q116[2];
+cx q116[2], q116[9];
+x q116[2];
+cx q116[1], q116[2];
+cx q116[3], q116[4];
+x q116[4];
+cx q116[4], q116[7];
+x q116[4];
+cx q116[3], q116[4];
+mcx_gray q116[6], q116[7], q116[8], q116[9], q116[10], q116[11], q116[12];
+cx q116[3], q116[4];
+x q116[4];
+cx q116[4], q116[7];
+x q116[4];
+cx q116[3], q116[4];
+cx q116[1], q116[2];
+x q116[2];
+cx q116[2], q116[9];
+x q116[2];
+cx q116[1], q116[2];
+cx q116[1], q116[3];
+x q116[3];
+cx q116[3], q116[8];
+x q116[3];
+cx q116[1], q116[3];
+cx q116[1], q116[5];
+x q116[5];
+cx q116[5], q116[7];
+x q116[5];
+cx q116[1], q116[5];
+x q116[11];
+mcx q116[6], q116[7], q116[8], q116[9], q116[11];
+cx q116[1], q116[5];
+x q116[5];
+cx q116[5], q116[9];
+x q116[5];
+cx q116[1], q116[5];
+cx q116[1], q116[3];
+x q116[3];
+cx q116[3], q116[8];
+x q116[3];
+cx q116[1], q116[3];
+cx q116[1], q116[2];
+x q116[2];
+cx q116[2], q116[7];
+x q116[2];
+cx q116[1], q116[2];
+cx q116[0], q116[2];
+x q116[2];
+cx q116[2], q116[6];
+x q116[2];
+cx q116[0], q116[2];
+h q116[0];
+x q116[0];
+h q116[1];
+x q116[1];
+h q116[2];
+x q116[2];
+h q116[3];
+x q116[3];
+h q116[4];
+x q116[4];
+z q116[5];
+mcx_gray q116[0], q116[1], q116[2], q116[3], q116[4], q116[5];
+z q116[5];
+x q116[0];
+h q116[0];
+x q116[1];
+h q116[1];
+x q116[2];
+h q116[2];
+x q116[3];
+h q116[3];
+x q116[4];
+h q116[4];
+cx q116[0], q116[2];
+x q116[2];
+cx q116[2], q116[6];
+x q116[2];
+cx q116[0], q116[2];
+cx q116[1], q116[2];
+x q116[2];
+cx q116[2], q116[7];
+x q116[2];
+cx q116[1], q116[2];
+cx q116[1], q116[3];
+x q116[3];
+cx q116[3], q116[8];
+x q116[3];
+cx q116[1], q116[3];
+cx q116[1], q116[5];
+x q116[5];
+cx q116[5], q116[9];
+x q116[5];
+cx q116[1], q116[5];
+x q116[11];
+mcx q116[6], q116[7], q116[8], q116[9], q116[11];
+cx q116[1], q116[5];
+x q116[5];
+cx q116[5], q116[7];
+x q116[5];
+cx q116[1], q116[5];
+cx q116[1], q116[3];
+x q116[3];
+cx q116[3], q116[8];
+x q116[3];
+cx q116[1], q116[3];
+cx q116[1], q116[2];
+x q116[2];
+cx q116[2], q116[9];
+x q116[2];
+cx q116[1], q116[2];
+cx q116[3], q116[4];
+x q116[4];
+cx q116[4], q116[7];
+x q116[4];
+cx q116[3], q116[4];
+mcx_gray q116[6], q116[7], q116[8], q116[9], q116[10], q116[11], q116[12];
+cx q116[3], q116[4];
+x q116[4];
+cx q116[4], q116[7];
+x q116[4];
+cx q116[3], q116[4];
+cx q116[1], q116[2];
+x q116[2];
+cx q116[2], q116[9];
+x q116[2];
+cx q116[1], q116[2];
+cx q116[1], q116[3];
+x q116[3];
+cx q116[3], q116[8];
+x q116[3];
+cx q116[1], q116[3];
+cx q116[1], q116[5];
+x q116[5];
+cx q116[5], q116[7];
+x q116[5];
+cx q116[1], q116[5];
+x q116[11];
+mcx q116[6], q116[7], q116[8], q116[9], q116[11];
+cx q116[1], q116[5];
+x q116[5];
+cx q116[5], q116[9];
+x q116[5];
+cx q116[1], q116[5];
+cx q116[1], q116[3];
+x q116[3];
+cx q116[3], q116[8];
+x q116[3];
+cx q116[1], q116[3];
+cx q116[1], q116[2];
+x q116[2];
+cx q116[2], q116[7];
+x q116[2];
+cx q116[1], q116[2];
+cx q116[0], q116[2];
+x q116[2];
+cx q116[2], q116[6];
+x q116[2];
+cx q116[0], q116[2];
+h q116[0];
+x q116[0];
+h q116[1];
+x q116[1];
+h q116[2];
+x q116[2];
+h q116[3];
+x q116[3];
+h q116[4];
+x q116[4];
+z q116[5];
+mcx_gray q116[0], q116[1], q116[2], q116[3], q116[4], q116[5];
+z q116[5];
+x q116[0];
+h q116[0];
+x q116[1];
+h q116[1];
+x q116[2];
+h q116[2];
+x q116[3];
+h q116[3];
+x q116[4];
+h q116[4];
+_creg[0] = measure q116[0];
+_creg[1] = measure q116[1];
+_creg[2] = measure q116[2];
+_creg[3] = measure q116[3];
+_creg[4] = measure q116[4];
+_creg[5] = measure q116[5];
