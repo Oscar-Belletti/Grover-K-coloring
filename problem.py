@@ -52,6 +52,8 @@ def problem_comp_num(problem):
 
 
 def comparator(qc, problem, i, j, f):
+    if i > j:
+        i, j = j, i
     a = node_qubits(problem, i)
     b = node_qubits(problem, j)
     for i, j in zip(a, b):

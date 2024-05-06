@@ -45,16 +45,59 @@ def put(qc, problem, i, components):
         end = start
 
 
+# def setup(qc, problem, components):
+#     output_indexes = []
+#     end = 0
+#     print(len(components))
+#     while end != len(components):
+#         start = end
+#         i = floor(log2(len(components) - start)) + 1
+#         end += 2 ** max(0, i - 1)
+#         print("putting", end-start, "components at", i)
+#         put(qc, problem, i, components[start:end])
+#         output_indexes.append(ancilla_index(problem) + i)
+#     return output_indexes
+
+
+# The actual way it should be done (by fixing put)
+# def setup(qc, problem, components):
+#     output_indexes = []
+#     values = []
+#     i = 0
+
+#     while sum(values) != len(components):
+#         chunk = min(2 ** max(i-1, 0), len(components) - sum(values))
+#         values.append(chunk)
+#         i += 1
+
+#     c_i = 0
+#     for i, chunk in reversed(list(enumerate(values))):
+#         put(qc, problem, i, components[c_i:c_i + chunk])
+#         c_i += chunk
+#         output_indexes.append(ancilla_index(problem) + i)
+#     return output_indexes
+
+
 def setup(qc, problem, components):
     output_indexes = []
-    end = 0
-    while end != len(components):
-        start = end
-        i = floor(log2(len(components) - start)) + 1
-        end += 2 ** max(0, i - 1)
-        put(qc, problem, i, components[start:end])
+    values = []
+    indexes = []
+    i = ceil(log2(problem_comp_num(problem)))  # last ancilla
+
+    while sum(values) != len(components):
+        chunk = 2 ** max(i-1, 0)
+        if chunk <= len(components) - sum(values):
+            values.append(chunk)
+            indexes.append(i)
+        i -= 1
+
+    c_i = 0
+    for i, chunk in zip(indexes, values):
+        put(qc, problem, i, components[c_i:c_i + chunk])
+        c_i += chunk
         output_indexes.append(ancilla_index(problem) + i)
     return output_indexes
+
 
 
 def minimal_compose(qc, problem):
